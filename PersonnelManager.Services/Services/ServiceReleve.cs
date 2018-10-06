@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using PersonnelManager.Data;
+using PersonnelManager.Dal.Data;
+using PersonnelManager.Dal.Entites;
 
-namespace PersonnelManager.Services
+namespace PersonnelManager.Business.Services
 {
     public class ServiceReleve
     {

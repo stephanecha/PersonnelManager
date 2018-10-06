@@ -1,4 +1,4 @@
-﻿namespace PersonnelManager.Data
+namespace PersonnelManager.Dal.Entites
 {
     public enum StatutEmploye
     {

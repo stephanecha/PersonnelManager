@@ -1,7 +1,7 @@
-﻿using System;
-using PersonnelManager.Data;
+using System;
+using PersonnelManager.Dal.Entites;
 
-namespace PersonnelManager.Services
+namespace PersonnelManager.Business
 {
     public class SalaireOuvrier : Salaire
     {

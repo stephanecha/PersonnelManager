@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PersonnelManager.Data
+namespace PersonnelManager.Dal.Entites
 {
     [Table("Ouvriers")]
     public class Ouvrier : Employe

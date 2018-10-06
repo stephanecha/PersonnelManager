@@ -1,4 +1,5 @@
-﻿@model IEnumerable<PersonnelManager.Data.Employe>
+﻿@using PersonnelManager.Dal.Entites
+@model IEnumerable<PersonnelManager.Dal.Entites.Employe>
 
 <h2>Employés</h2>
 
@@ -31,11 +32,11 @@ else
                 <td>@employe.DateEmbauche.ToShortDateString()</td>
                 <td>@employe.Statut.ToString()</td>
                 <td class="actions">
-                    @if (employe.Statut == PersonnelManager.Data.StatutEmploye.Cadre)
+                    @if (employe.Statut == StatutEmploye.Cadre)
                     {
                         <a class="btn btn-info-outline btn-sm" href="/Employes/EditionCadre?idCadre=@employe.Id">Modifier</a>
                     }
-                    else if (employe.Statut == PersonnelManager.Data.StatutEmploye.Ouvrier)
+                    else if (employe.Statut == StatutEmploye.Ouvrier)
                     {
                         <a class="btn btn-info-outline btn-sm" href="/Employes/EditionOuvrier?idOuvrier=@employe.Id">Modifier</a>
                     }

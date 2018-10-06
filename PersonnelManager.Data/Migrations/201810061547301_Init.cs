@@ -1,4 +1,4 @@
-namespace PersonnelManager.Data.Migrations
+namespace PersonnelManager.Dal.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

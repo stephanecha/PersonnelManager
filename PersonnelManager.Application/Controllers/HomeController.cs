@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Web.Mvc;
-using PersonnelManager.Data;
+using PersonnelManager.Business.Services;
+using PersonnelManager.Dal.Data;
 using PersonnelManager.Filters;
 using PersonnelManager.Models;
-using PersonnelManager.Services;
 
 namespace PersonnelManager.Controllers
 {
@@ -51,7 +51,7 @@ namespace PersonnelManager.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError(string.Empty, "Utilisateur invalide");
+                        this.ModelState.AddModelError(string.Empty, "Utilisateur invalide");
                         return this.View(viewModel);
                     }
                 }

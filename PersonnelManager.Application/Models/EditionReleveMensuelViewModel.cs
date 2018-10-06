@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using PersonnelManager.Data;
+using PersonnelManager.Dal.Entites;
 
 namespace PersonnelManager.Models
 {

@@ -1,6 +1,7 @@
-﻿using System.Data.Entity;
+using System.Data.Entity;
+using PersonnelManager.Dal.Entites;
 
-namespace PersonnelManager.Data.Context
+namespace PersonnelManager.Dal.Context
 {
     public class DataContext : DbContext
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using PersonnelManager.Data;
+using PersonnelManager.Dal.Entites;
 
 namespace PersonnelManager.Models
 {

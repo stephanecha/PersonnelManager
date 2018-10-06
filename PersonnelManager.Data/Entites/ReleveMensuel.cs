@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PersonnelManager.Data
+namespace PersonnelManager.Dal.Entites
 {
     [Table("RelevesMensuels")]
     public class ReleveMensuel

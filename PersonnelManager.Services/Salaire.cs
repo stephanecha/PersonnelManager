@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PersonnelManager.Data;
+using System;
+using PersonnelManager.Dal.Entites;
 
-namespace PersonnelManager.Services
+namespace PersonnelManager.Business
 {
     public class Salaire
     {

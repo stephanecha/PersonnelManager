@@ -1,10 +1,11 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
-using PersonnelManager.Data;
+using PersonnelManager.Business.Exceptions;
+using PersonnelManager.Business.Services;
+using PersonnelManager.Dal.Data;
+using PersonnelManager.Dal.Entites;
 using PersonnelManager.Filters;
 using PersonnelManager.Models;
-using PersonnelManager.Services;
-using PersonnelManager.Services.Exceptions;
 
 namespace PersonnelManager.Controllers
 {
@@ -63,7 +64,7 @@ namespace PersonnelManager.Controllers
         [HttpPost]
         public ActionResult Nouveau(EditionReleveMensuelViewModel viewModel)
         {
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
                 var releveMensuel = new ReleveMensuel
                 {
@@ -83,11 +84,11 @@ namespace PersonnelManager.Controllers
                 try
                 {
                     this.serviceReleve.EnregistrerReleveMensuel(releveMensuel);
-                    return RedirectToAction("Index", "Releves");
+                    return this.RedirectToAction("Index", "Releves");
                 }
                 catch (BusinessException exception)
                 {
-                    ModelState.AddModelError(string.Empty, exception.Message);
+                    this.ModelState.AddModelError(string.Empty, exception.Message);
                 }
             }
 
@@ -124,7 +125,7 @@ namespace PersonnelManager.Controllers
         [HttpPost]
         public ActionResult Saisie(EditionReleveMensuelViewModel viewModel)
         {
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
                 var releveMensuel = this.serviceReleve.GetReleveMensuel(viewModel.Id);
 
@@ -137,11 +138,11 @@ namespace PersonnelManager.Controllers
                 try
                 {
                     this.serviceReleve.EnregistrerReleveMensuel(releveMensuel);
-                    return RedirectToAction("Index", "Releves");
+                    return this.RedirectToAction("Index", "Releves");
                 }
                 catch (BusinessException exception)
                 {
-                    ModelState.AddModelError(string.Empty, exception.Message);
+                    this.ModelState.AddModelError(string.Empty, exception.Message);
                 }
             }
 
@@ -149,8 +150,9 @@ namespace PersonnelManager.Controllers
             return this.View("EditionReleveMensuel", viewModel);
         }
 
-        private int GetIdOuvrier() {
-            return ((Utilisateur)Session["Utilisateur"]).IdOuvrier.Value;
+        private int GetIdOuvrier()
+        {
+            return ((Utilisateur)this.Session["Utilisateur"]).IdOuvrier.Value;
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace PersonnelManager.Services.Exceptions
+namespace PersonnelManager.Business.Exceptions
 {
     public class BusinessException : Exception
     {

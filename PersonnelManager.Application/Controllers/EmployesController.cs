@@ -1,9 +1,10 @@
 ﻿using System.Web.Mvc;
-using PersonnelManager.Data;
+using PersonnelManager.Business.Exceptions;
+using PersonnelManager.Business.Services;
+using PersonnelManager.Dal.Data;
+using PersonnelManager.Dal.Entites;
 using PersonnelManager.Filters;
 using PersonnelManager.Models;
-using PersonnelManager.Services;
-using PersonnelManager.Services.Exceptions;
 
 namespace PersonnelManager.Controllers
 {

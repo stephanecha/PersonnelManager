@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using PersonnelManager.Dal.Entites;
 
-namespace PersonnelManager.Data
+namespace PersonnelManager.Dal.Data
 {
     public interface IDataEmploye
     {

@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using PersonnelManager.Data.Context;
+using PersonnelManager.Dal.Context;
+using PersonnelManager.Dal.Entites;
 
-namespace PersonnelManager.Data
+namespace PersonnelManager.Dal.Data
 {
     public class DbDataReleve : IDataReleve
     {

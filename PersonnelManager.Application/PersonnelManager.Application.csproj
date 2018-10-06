@@ -160,11 +160,6 @@
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Site.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -197,13 +192,13 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PersonnelManager.Services\PersonnelManager.Services.csproj">
+    <ProjectReference Include="..\PersonnelManager.Services\PersonnelManager.Business.csproj">
       <Project>{0dbc7f04-572a-4ecb-a1ba-c18f83a8fcab}</Project>
-      <Name>PersonnelManager.Services</Name>
+      <Name>PersonnelManager.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PersonnelManager.Data\PersonnelManager.Data.csproj">
+    <ProjectReference Include="..\PersonnelManager.Data\PersonnelManager.Dal.csproj">
       <Project>{bac10418-3b08-4712-8e72-0f2cb6e7ef32}</Project>
-      <Name>PersonnelManager.Data</Name>
+      <Name>PersonnelManager.Dal</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

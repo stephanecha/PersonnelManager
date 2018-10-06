@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using PersonnelManager.Data;
-using PersonnelManager.Services.Exceptions;
+using PersonnelManager.Business.Exceptions;
+using PersonnelManager.Dal.Data;
+using PersonnelManager.Dal.Entites;
 
-namespace PersonnelManager.Services
+namespace PersonnelManager.Business.Services
 {
     public class ServicePeriode
     {

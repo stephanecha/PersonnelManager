@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManager.Application", "PersonnelManager.Application\PersonnelManager.Application.csproj", "{8B3A70F3-434C-44C7-B701-F126555B00F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManager.Services", "PersonnelManager.Services\PersonnelManager.Services.csproj", "{0DBC7F04-572A-4ECB-A1BA-C18F83A8FCAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManager.Business", "PersonnelManager.Services\PersonnelManager.Business.csproj", "{0DBC7F04-572A-4ECB-A1BA-C18F83A8FCAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManager.Data", "PersonnelManager.Data\PersonnelManager.Data.csproj", "{BAC10418-3B08-4712-8E72-0F2CB6E7EF32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManager.Dal", "PersonnelManager.Data\PersonnelManager.Dal.csproj", "{BAC10418-3B08-4712-8E72-0F2CB6E7EF32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
