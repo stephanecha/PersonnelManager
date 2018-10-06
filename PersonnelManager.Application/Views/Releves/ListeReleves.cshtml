@@ -1,0 +1,73 @@
+﻿@model PersonnelManager.Models.ListeRelevesViewModel
+@{
+    var historique = Model.RelevesMensuels.Where(x => x.Periode.EstFermee);
+    var relevesEnCours = Model.RelevesMensuels.Where(x => !x.Periode.EstFermee);
+}
+
+<h2>Relevés mensuels</h2>
+
+@if (Model.PeriodesOuvertes.Any() || relevesEnCours.Any())
+{
+    <h3>Périodes à saisir</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Mois</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var periode in Model.PeriodesOuvertes)
+            {
+                <tr>
+                    <td style="width:1%;">
+                        <a class="btn btn-info-outline btn-sm" href="/Releves/Nouveau?idPeriode=@periode.Id&idOuvrier=@Model.IdOuvrier">Saisir</a>
+                    </td>
+                    <td>@periode.PremierJour.ToString("MMMM")</td>
+                </tr>
+            }
+            @foreach (var releve in relevesEnCours)
+            {
+                <tr>
+                    <td style="width:1%;">
+                        <a class="btn btn-info-outline btn-sm" href="/Releves/Saisie?idReleve=@releve.Id">Modifier</a>
+                    </td>
+                    <td>@releve.Periode.PremierJour.ToString("MMMM")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (historique.Any())
+{
+    <h3>Historique</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Mois</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var releve in historique)
+            {
+                <tr>
+                    <td style="width:1%;">
+                        @if (!releve.Periode.EstFermee)
+                        {
+                            <a class="btn btn-info-outline btn-sm" href="/Releves/Saisie?idReleve=@releve.Id">Modifier</a>
+                        }
+                    </td>
+                    <td>@releve.Periode.PremierJour.ToString("MMMM")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@section scripts{
+    <script>
+    </script>
+
+}
