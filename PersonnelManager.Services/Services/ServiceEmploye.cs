@@ -30,6 +30,7 @@ namespace PersonnelManager.Business.Services
         {
             return this.dataEmploye.GetCadre(idCadre);
         }
+
         public void EnregistrerCadre(Cadre cadre)
         {
             this.dataEmploye.EnregistrerCadre(cadre);

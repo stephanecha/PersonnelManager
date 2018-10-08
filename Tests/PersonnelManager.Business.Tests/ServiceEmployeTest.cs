@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq.Expressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PersonnelManager.Business.Services;
+using PersonnelManager.Dal.Entites;
 
 namespace PersonnelManager.Business.Tests
 {
@@ -10,8 +13,6 @@ namespace PersonnelManager.Business.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            var serviceEmploye = 
-                new ServiceEmploye(new FauxDataEmploye());
         }
     }
 }
