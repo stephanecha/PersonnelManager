@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using PersonnelManager.Business.Exceptions;
 using PersonnelManager.Business.Services;
 using PersonnelManager.Dal.Data;
@@ -25,7 +26,11 @@ namespace PersonnelManager.Business.Tests
         [TestMethod]
         public void DateEmbauchePosterieureA1920()
         {
-            var serviceEmploye = new ServiceEmploye(new DbDataEmploye());
+            var fauxDataEmploye = new Mock<IDataEmploye>();
+
+            fauxDataEmploye.Setup(x => x.EnregistrerOuvrier(It.IsAny<Ouvrier>()));
+
+            var serviceEmploye = new ServiceEmploye(fauxDataEmploye.Object);
             var ouvrier = new Ouvrier
             {
                 Nom = "Dupont",
